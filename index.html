@@ -1,0 +1,49 @@
+<html>
+<head>
+  <script type="text/javascript" src="script.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<form name="sci-calc">
+ <table class="calculator" cellspacing="0" cellpadding="1">
+   <tr>
+     <td colspan="5"><input id="display" name="display" value="0" size="28" maxlength="25"></td>
+   </tr>
+   <tr>
+     <td><input type="button" class="button2" name="button2" value="1" onclick="achar(this.form.display, '1')"></td>
+     <td><input type="button" class="button2" name="button2" value="2" onclick="achar(this.form.display, '2')"></td>
+     <td><input type="button" class="button2" name="button2" value="3" onclick="achar(this.form.display, '3')"></td>
+     <td><input type="button" class="button3" name="button3" value="+" onclick="achar(this.form.display, '+')"></td>
+     <td><input type="button" class="button3" name="button3" value="-" onclick="achar(this.form.display, '-')"></td>
+   </tr>
+   <tr>
+     <td><input type="button" class="button2" name="button2" value="4" onclick="achar(this.form.display, '4')"></td>
+     <td><input type="button" class="button2" name="button2" value="5" onclick="achar(this.form.display, '5')"></td>
+     <td><input type="button" class="button2" name="button2" value="6" onclick="achar(this.form.display, '6')"></td>
+     <td><input type="button" class="button3" name="button3" value="*" onclick="achar(this.form.display, '*')"></td>
+     <td><input type="button" class="button3" name="button3" value="/" onclick="achar(this.form.display, '/')"></td>
+   </tr>
+   <tr>
+     <td><input type="button" class="button2" name="button2" value="7" onclick="achar(this.form.display, '7')"></td>
+     <td><input type="button" class="button2" name="button2" value="8" onclick="achar(this.form.display, '8')"></td>
+     <td><input type="button" class="button2" name="button2" value="9" onclick="achar(this.form.display, '9')"></td>
+     <td><input type="button" class="button3" name="button3" value="x^n" onclick="if(cknum(this.form.display.value)) { expo(this.form) }"></td>
+     <td><input type="button" class="button3" name="button3" value="sin" onclick="if(cknum(this.form.display.value)) { sine(this.form) }"></td>
+     <tr>
+       <td><input type="button" class="button1" name="button1" value="C" onclick="this.form.display.value=  0 "></td>
+       <td><input type="button" class="button2" name="button2" value="0" onclick="achar(this.form.display, '0')"></td>
+       <td><input type="button" class="button1" name="button1" value="=" onclick="if(cknum(this.form.display.value)) { calc(this.form) }"></td>
+       <td><input type="button" class="button3" name="button3" value="%" onclick=" percent(this.form.display)"></td>
+       <td><input type="button" class="button3" name="button3" value="cos" onclick="if(cknum(this.form.display.value)) { cosine(this.form) }"></td>
+     </tr>
+   <tr>
+     <td><input type="button" class="button3" name="button3" value="." onclick="achar(this.form.display, '.')"></td>
+     <td><input type="button" class="button3" name="button3" value="(" onclick="achar(this.form.display, '(')"></td>
+     <td><input type="button" class="button3" name="button3" value=")" onclick="achar(this.form.display,')')"></td>
+     <td><input type="button" class="button3" name="button3" value="sqrt" onclick="if(cknum(this.form.display.value)) { sqrt(this.form) }"></td>
+     <td><input type="button" class="button3" name="button3" value="tan" onclick="if(cknum(this.form.display.value)) { tan(this.form) }"></td>
+   </tr>
+</table>
+</form>
+</body>
+</html>
